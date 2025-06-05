@@ -4,8 +4,7 @@ import pandas as pd
 
 df = pd.read_csv("listings.csv")
 
-st.title("Austin AirBnB Dashboard")
-st.markdown("Explore Austin, TX AirBnB listings interactively!")
+st.title("AUSTIN AIRBNB DASHBOARD")
 
 df['price'] = df['price'].replace('[\$,]', '', regex=True).astype(float)
 df = df[df['price'] < 1000] 
